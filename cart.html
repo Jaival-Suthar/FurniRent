@@ -84,11 +84,16 @@
             <h3 class="h3">Subtotal:</h3>
             <p class="cart-subtotal">$40.00</p>
       
-            <button class="cart-checkout-btn" aria-label="proceed to checkout">
+           <button id="cartCheckoutBtn" class="cart-checkout-btn" aria-label="proceed to checkout">
               Proceed to Checkout
             </button>
           </div>
         </div>
       </section>
+   <script>
+      document.getElementById("cartCheckoutBtn").addEventListener("click", function() {
+        window.location.href = "shipping.html"; 
+      });
+    </script>
 </body>
 </html>
