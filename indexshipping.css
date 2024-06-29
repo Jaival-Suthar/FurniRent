@@ -1,0 +1,135 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  background-color: #f7f7f7; /* light gray background */
+}
+
+/* Header Styles */
+
+.header {
+  background-color: #f2f2f2; /* light gray background */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px 10px 0 0; /* curved top corners */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-step {
+  font-size: 14px;
+  color: #666;
+  margin-right: 20px;
+}
+
+.progress-step.active {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Main Container Styles */
+
+.main-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* curved corners */
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+
+.shipping-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 48%;
+}
+
+.form-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* curved corners */
+}
+
+.form-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-options {
+  margin-top: 20px;
+}
+
+.option {
+  margin-bottom: 10px;
+}
+
+.option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.option label {
+  font-size: 14px;
+  color: #666;
+}
+
+.button {
+  background-color: #4CAF50; /* light green background */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px; /* curved corners */
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3a7e3a;
+}

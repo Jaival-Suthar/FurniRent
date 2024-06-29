@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="indexshipping.css" />  <title>FurniRent - Shipping</title> </head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"> <span class="logo-text">FurniRent</span>
+    </a>
+    <div class="progress-bar"> <span class="progress-step active">Shipping</span> <span class="progress-step">Payment</span>
+      <span class="progress-step">Payment</span>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <h2 class="heading">Shipping Address</h2>
+
+    <form class="shipping-form">
+      <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="country" class="form-label">Country</label>
+        <select id="country" name="country" class="form-input">
+          <option value="IN">India</option>
+          <option value="CA">Canada</option>
+          <option value="UK">United Kingdom</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="address1" class="form-label">Address Line 1</label>
+        <input type="text" id="address1" name="address1" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="address2" class="form-label">Address Line 2 (Optional)</label>
+        <input type="text" id="address2" name="address2" class="form-input">
+      </div>
+      <div class="form-group">
+        <label for="city" class="form-label">City / Suburb</label>
+        <input type="text" id="city" name="city" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="zip" class="form-label">Zip / Postcode</label>
+        <input type="text" id="zip" name="zip" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-input" required>
+      </div>
+      <div class="shipping-options"> <h4>Shipping Options</h4>
+        <div class="option">
+          <input type="radio" id="standard-shipping" name="shipping" value="standard" checked>
+          <label for="standard-shipping">Standard Shipping (Estimated 3-5 business days)</label>
+        </div>
+        <div class="option">  <input type="radio" id="express-shipping" name="shipping" value="express">
+          <label for="express-shipping">Express Shipping (Estimated 1-2 business days) - Additional fee applies</label>
+        </div>
+      </div>
+      <button type="submit" class="button">Continue to Checkout</button> </form>
+  </main>
+</body>
+</html>
