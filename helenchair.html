@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helen Chair - Product Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .header-action-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .btn-badge {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 0.3rem;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-action-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .card-action-btn ion-icon {
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FurniRent</h1>
+    </header>
+
+    <main>
+        <section class="product">
+            <h2>Helen Chair</h2>
+            <img src="./assets/images/hero-product-2.jpg" alt="Helen Chair">
+            <p class="price">$69.50</p>
+            <p class="description">The Helen Chair is a perfect blend of comfort and style, ideal for any modern home. Its sleek design and ergonomic features make it a must-have for your living space.</p>
+            <p class="dimensions"></p>
+            <button class="card-action-btn" aria-label="add to cart" title="add to cart" onclick="redirectToShipping()">
+                <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                Add to Cart
+            </button>
+        </section>
+    </main>
+
+    <script>
+        function redirectToShipping() {
+            window.location.href = "shipping.html";
+        }
+
+        function getRandomDimensions() {
+            const dimensionsArray = [
+                "Dimensions: 30\" H x 20\" W x 20\" D",
+                "Dimensions: 32\" H x 22\" W x 24\" D",
+                "Dimensions: 34\" H x 24\" W x 26\" D",
+                "Dimensions: 36\" H x 26\" W x 28\" D",
+                "Dimensions: 38\" H x 28\" W x 30\" D"
+            ];
+            const randomIndex = Math.floor(Math.random() * dimensionsArray.length);
+            return dimensionsArray[randomIndex];
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const dimensionsElement = document.querySelector('.dimensions');
+            dimensionsElement.textContent = getRandomDimensions();
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
