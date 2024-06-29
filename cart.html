@@ -34,9 +34,9 @@
                   </div>
       
                   <div class="cart-quantity">
-                    <button class="cart-qty-btn minus" aria-label="decrease quantity" onclick = dec(event)>-</button>
+                    <button class="cart-qty-btn minus" aria-label="decrease quantity">-</button>
                     <input type="number" value="1" min="1" max="10" class="cart-qty-input">
-                    <button class="cart-qty-btn plus" aria-label="increase quantity" onclick= inc(event)>+</button>
+                    <button class="cart-qty-btn plus" aria-label="increase quantity">+</button>
                   </div>
       
                   <button class="cart-remove-btn" aria-label="remove from cart">
@@ -65,9 +65,9 @@
                   </div>
       
                   <div class="cart-quantity">
-                    <button class="cart-qty-btn minus" aria-label="decrease quantity"onclick = dec(event)>-</button>
+                    <button class="cart-qty-btn minus" aria-label="decrease quantity">-</button>
                     <input type="number" value="1" min="1" max="10" class="cart-qty-input">
-                    <button class="cart-qty-btn plus" aria-label="increase quantity"onclick= inc(event)>+</button>
+                    <button class="cart-qty-btn plus" aria-label="increase quantity">+</button>
                   </div>
       
                   <button class="cart-remove-btn" aria-label="remove from cart">
@@ -82,27 +82,18 @@
       
           <div class="cart-summary">
             <h3 class="h3">Subtotal:</h3>
-            <div class="cart-price">
-              <data class="price" value="40">$40</data>
-            </div>
+            <p class="cart-subtotal">$40.00</p>
       
-            <button class="cart-checkout-btn" aria-label="proceed to checkout">
+            <button  id="cartCheckoutBtn" class="cart-checkout-btn" aria-label="proceed to checkout">
               Proceed to Checkout
             </button>
           </div>
         </div>
       </section>
       <script>
-        function dec(event){
-          if(event.target.parentElement.childNodes[3].value > 0)
-          event.target.parentElement.childNodes[3].value--;
-          let x = event.target.parentElement.parentElement.childNodes[5].childNodes[1].value
-          event.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[5].childNodes[3].value -= x;
-          console.log(event.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[5].childNodes[3].value )
-        }
-        function inc(event){
-          event.target.parentElement.childNodes[3].value++;
-        }
+        document.getElementById("cartCheckoutBtn").addEventListener("click", function() {
+          window.location.href = "shipping.html"; 
+        });
       </script>
 </body>
 </html>
