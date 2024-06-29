@@ -217,6 +217,39 @@ body.active { overflow: hidden; }
 
 
 
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 300px; /* Adjust width as needed */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px; /* Adjust max height as needed */
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content div:hover {
+  background-color: #ddd;
+}
+
 
 /*-----------------------------------*\
   #HEADER
